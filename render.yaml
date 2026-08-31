@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: wardrobe-app
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    disk:
+      name: wardrobe-data
+      mountPath: /opt/render/project/src
+      sizeGB: 1
